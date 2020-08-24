@@ -1,0 +1,29 @@
+{
+  "name": "invoice-test-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node app",
+    "server": "nodemon app",
+    "client": "npm run start --prefix invoice-test-client",
+    "client:install":"npm install --prefix invoice-test-client",
+    "client:build":"npm run build --prefix invoice-test-client",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "Fedechkin Kiril <fedechkin-kiril@mail.ru>",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
+  }
+}
